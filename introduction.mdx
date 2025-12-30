@@ -1,0 +1,117 @@
+---
+title: Introduction to Вячеслав Стёпин
+description: Welcome to Вячеслав Стёпin's documentation space, a platform designed for organizing and managing your project documentation efficiently.
+---
+
+## Overview
+
+Вячеслав Стёпин provides a centralized space for you to create, organize, and manage all your project documentation. You can build rich, interactive docs using MDX with powerful components, ensuring your team stays informed with up-to-date information. Customize your space with your brand color `#3B82F6` for a professional look.
+
+## Key Features
+
+Вячеслав Стёпин offers essential tools to streamline your documentation workflow.
+
+<Columns cols={3}>
+  <Card title="Rich MDX Components" icon="components" href="#components">
+    Use components like `<Callout>`, `<Steps>`, and `<Tabs>` to create engaging docs.
+  </Card>
+  <Card title="Hierarchical Organization" icon="folder" href="#organization">
+    Structure your content with nested pages and sections for easy navigation.
+  </Card>
+  <Card title="Customizable Themes" icon="palette" href="#customization">
+    Apply your brand color `#3B82F6` and customize layouts effortlessly.
+  </Card>
+</Columns>
+
+## Quick Start
+
+Get started with Вячеслав Стёпин in minutes.
+
+<Steps>
+  <Step title="Create Your Space" icon="plus">
+    Sign up at `https://dashboard.example.com` and initialize your documentation space.
+  </Step>
+  <Step title="Add Your First Page" icon="file-text">
+    Create `introduction.mdx` and add frontmatter with your `title` and `description`.
+  </Step>
+  <Step title="Customize Branding" icon="paint-bucket">
+    Set your brand color in the theme config:
+    
+````json
+{
+  "brandColor": "#3B82F6"
+}
+````
+    
+  </Step>
+  <Step title="Publish and Share" icon="share-2">
+    Preview changes and share your docs via public URL.
+  </Step>
+</Steps>
+
+## Customization Options
+
+Tailor Вячеслав Стёпин to match your brand.
+
+<Tabs>
+  <Tab title="Theme Config" icon="settings">
+    Update your global theme with the brand color:
+    
+````javascript
+// config/theme.js
+export default {
+  brandColor: '#3B82F6',
+  primaryFont: 'Inter',
+  sidebarWidth: '280px'
+};
+````
+    
+  </Tab>
+  <Tab title="Component Overrides" icon="code">
+    Customize components via CSS variables:
+    
+````css
+:root {
+  --brand-color: #3B82F6;
+  --callout-info-bg: rgba(59, 130, 246, 0.1);
+}
+````
+    
+  </Tab>
+</Tabs>
+
+<Callout kind="tip">
+  Start by linking your GitHub repo for version-controlled docs. Explore more in [Quickstart](/quickstart).
+</Callout>
+
+## Next Steps
+
+<Columns cols={2}>
+  <Card title="Quickstart Guide" icon="zap" href="/quickstart">
+    Set up your first project and add interactive components.
+  </Card>
+  <Card title="Authentication" icon="shield" href="/authentication">
+    Secure your space with API keys and user management.
+  </Card>
+  <Card title="Advanced Components" icon="layers" href="/components">
+    Master `<CodeGroup>`, `<ParamField>`, and more.
+  </Card>
+  <Card title="Changelog" icon="git-branch" href="/changelog">
+    Stay updated with the latest releases.
+  </Card>
+</Columns>
+
+<Expandable title="Advanced Customization" default-open="false">
+  For deeper theming, override MDX components globally:
+  
+````tsx
+// mdx-plugins.js
+import { Callout } from './components/Callout';
+
+const withBrandCallout = (props) => (
+  <Callout {...props} style={{ borderColor: '#3B82F6' }} />
+);
+````
+  
+  Integrate with your CI/CD pipeline for automatic deployments.
+</Expandable>

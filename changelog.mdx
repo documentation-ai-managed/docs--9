@@ -1,0 +1,149 @@
+---
+title: Changelog
+description: Track the latest updates and improvements to Вячеслав Стёпин.
+---
+
+## Recent Updates
+
+Stay informed about new features, improvements, and fixes. You receive automatic notifications for major releases.
+
+<Update label="2024-10-15" description="v1.2.0" tags={["feature", "bugfix"]}>
+
+## New Features
+
+- Added real-time collaboration for shared documents, allowing multiple users to edit simultaneously via WebSockets at `wss://api.example.com/ws`.
+- Introduced customizable themes with brand color support (`#3B82F6` as default).
+
+## Improvements
+
+- Enhanced search performance by `>50%` using indexed full-text queries.
+
+## Bug Fixes
+
+- Resolved rendering issues with Cyrillic characters in headings.
+- Fixed export to PDF when including Mermaid diagrams.
+
+</Update>
+
+<Update label="2024-09-20" description="v1.1.0" tags={["feature", "improvement"]}>
+
+## New Features
+
+- Integrated Mermaid diagram support for flowcharts and sequences directly in MDX pages.
+- Added API endpoints for programmatic document creation (`POST /api/documents`).
+
+## Improvements
+
+- Optimized image loading with lazy loading and `width`/`height` attributes for better layout shift prevention.
+
+## Bug Fixes
+
+- Corrected ParamField rendering for `path` and `query` parameters simultaneously.
+
+</Update>
+
+<Update label="2024-08-10" description="v1.0.0" tags={["breaking", "feature"]}>
+
+## Breaking Changes
+
+- Updated authentication to use `{API_KEY}` headers instead of query params.
+
+## New Features
+
+- Core MDX components: `<Callout>`, `<Steps>`, `<Tabs>`, and more.
+- Full support for YAML frontmatter parsing without blank line errors.
+
+## Initial Setup
+
+- Dashboard at `https://dashboard.example.com` for managing spaces.
+
+</Update>
+
+## Upcoming Features
+
+Preview what's coming next to help you plan integrations.
+
+<Columns cols={3}>
+
+<Card title="AI Assistant" icon="zap" href="#">
+
+Generate documentation from prompts using AI.
+
+</Card>
+
+<Card title="Version Control" icon="git-branch" href="#">
+
+Git-like branching and merge for docs.
+
+</Card>
+
+<Card title="Advanced Analytics" icon="bar-chart-3" href="#">
+
+Track document views and engagement metrics.
+
+</Card>
+
+</Columns>
+
+## Upgrade Instructions
+
+Follow these steps to update your instance seamlessly.
+
+<Callout kind="info">
+
+Before upgrading, back up your data and review breaking changes.
+
+</Callout>
+
+<Steps>
+
+<Step title="Backup Data" icon="database">
+
+Export all documents via the dashboard.
+
+````bash
+curl -H "Authorization: Bearer YOUR_TOKEN" \
+  https://api.example.com/v1/documents/export
+````
+
+</Step>
+
+<Step title="Update Package" icon="download">
+
+<CodeGroup tabs="npm,yarn">
+
+````bash
+npm install vyacheslav-stepin@1.2.0
+````
+
+````bash
+yarn add vyacheslav-stepin@1.2.0
+````
+
+</CodeGroup>
+
+</Step>
+
+<Step title="Run Migrations" icon="settings">
+
+Execute database migrations for new features.
+
+````bash
+npm run migrate
+````
+
+</Step>
+
+<Step title="Restart Service" icon="refresh-cw">
+
+Restart your application server.
+
+</Step>
+
+</Steps>
+
+<Callout kind="tip">
+
+Test in staging first. Report issues at `https://github.com/vyacheslav-stepin/docs/issues`.
+
+</Callout>
